@@ -1,0 +1,35 @@
+#!/usr/bin/bash
+for i in 0.10
+do
+  echo ea=${i} ep=${i}
+  java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.8 -ea ${i} -ep ${i} -quiet -trace -freq&
+  java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 1.0 -ea ${i} -ep ${i} -quiet -trace -freq
+done
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

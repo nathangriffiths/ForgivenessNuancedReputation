@@ -1,0 +1,49 @@
+#!/usr/bin/bash
+for k in {1..100}
+do
+  echo no noise run number ${k}
+    java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.8 -generosity -g2 0.05 -l -b 0.1 -quiet &
+    java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.8 -generosity -g1 0.05 -l -b 0.1 -quiet &
+    java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.8 -generosity -g2 0.05 -l -b 1.0 -quiet &
+    java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.8 -generosity -g1 0.05 -l -b 1.0 -quiet &
+    java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.8 -generosity -g2 0.05 -l -b 10.0 -quiet &
+    java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.8 -generosity -g1 0.05 -l -b 10.0 -quiet &
+    java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.9 -generosity -g2 0.05 -l -b 0.1 -quiet &
+    java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.9 -generosity -g1 0.05 -l -b 0.1 -quiet &
+    java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.9 -generosity -g2 0.05 -l -b 1.0 -quiet &
+    java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.9 -generosity -g1 0.05 -l -b 1.0 -quiet &
+    java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.9 -generosity -g2 0.05 -l -b 10.0 -quiet &
+    java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.9 -generosity -g1 0.05 -l -b 10.0 -quiet &
+    java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 1.0 -generosity -g2 0.05 -l -b 0.1 -quiet &
+    java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 1.0 -generosity -g1 0.05 -l -b 0.1 -quiet &
+    java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 1.0 -generosity -g2 0.05 -l -b 1.0 -quiet &
+    java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 1.0 -generosity -g1 0.05 -l -b 1.0 -quiet &
+    java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 1.0 -generosity -g2 0.05 -l -b 10.0 -quiet &
+    java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 1.0 -generosity -g1 0.05 -l -b 10.0 -quiet
+done
+for i in 0.025 0.05 0.075 0.10 0.125 0.15 0.175 0.20
+do
+  for k in {1..100}
+  do
+    echo ea=${i} ep=${i} run number ${k}
+      java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.8 -ea ${i} -ep ${i} -generosity -g2 0.05 -l -b 0.1 -quiet &
+      java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.8 -ea ${i} -ep ${i} -generosity -g1 0.05 -l -b 0.1 -quiet &
+      java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.8 -ea ${i} -ep ${i} -generosity -g2 0.05 -l -b 1.0 -quiet &
+      java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.8 -ea ${i} -ep ${i} -generosity -g1 0.05 -l -b 1.0 -quiet &
+      java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.8 -ea ${i} -ep ${i} -generosity -g2 0.05 -l -b 10.0 -quiet &
+      java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.8 -ea ${i} -ep ${i} -generosity -g1 0.05 -l -b 10.0 -quiet &
+      java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.9 -ea ${i} -ep ${i} -generosity -g2 0.05 -l -b 0.1 -quiet &
+      java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.9 -ea ${i} -ep ${i} -generosity -g1 0.05 -l -b 0.1 -quiet &
+      java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.9 -ea ${i} -ep ${i} -generosity -g2 0.05 -l -b 1.0 -quiet &
+      java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.9 -ea ${i} -ep ${i} -generosity -g1 0.05 -l -b 1.0 -quiet &
+      java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.9 -ea ${i} -ep ${i} -generosity -g2 0.05 -l -b 10.0 -quiet &
+      java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 0.9 -ea ${i} -ep ${i} -generosity -g1 0.05 -l -b 10.0 -quiet &
+      java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 1.0 -ea ${i} -ep ${i} -generosity -g2 0.05 -l -b 0.1 -quiet &
+      java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 1.0 -ea ${i} -ep ${i} -generosity -g1 0.05 -l -b 0.1 -quiet &
+      java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 1.0 -ea ${i} -ep ${i} -generosity -g2 0.05 -l -b 1.0 -quiet &
+      java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 1.0 -ea ${i} -ep ${i} -generosity -g1 0.05 -l -b 1.0 -quiet &
+      java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 1.0 -ea ${i} -ep ${i} -generosity -g2 0.05 -l -b 10.0 -quiet &
+      java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -q 1.0 -ea ${i} -ep ${i} -generosity -g1 0.05 -l -b 10.0 -quiet
+  done
+done
+

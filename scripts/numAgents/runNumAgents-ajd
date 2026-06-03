@@ -1,0 +1,22 @@
+#!/usr/bin/bash
+for k in {1..100}
+do
+  echo no noise run number ${k}
+  java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -n 2 -m 6 -q 0.8 -is 3 -ajd -quiet -data num-agents-ajd &
+  java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -n 4 -m 12 -q 0.8 -is 3 -ajd -quiet -data num-agents-ajd &
+  java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -n 6 -m 18 -q 0.8 -is 3 -ajd -quiet -data num-agents-ajd &
+  java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -n 8 -m 24 -q 0.8 -is 3 -ajd -quiet -data num-agents-ajd &
+  java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -n 10 -m 30 -q 0.8 -is 3 -ajd -quiet -data num-agents-ajd  
+done
+for i in 0.10 0.20
+do
+  for k in {1..100}
+  do
+    echo ea=${i} ep=${i} run number ${k}
+    java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -n 2 -m 6 -q 0.8 -is 3 -ea ${i} -ep ${i} -ajd -quiet -data num-agents-ajd &
+    java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -n 4 -m 12 -q 0.8 -is 3 -ea ${i} -ep ${i} -ajd -quiet -data num-agents-ajd &
+    java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -n 6 -m 18 -q 0.8 -is 3 -ea ${i} -ep ${i} -ajd -quiet -data num-agents-ajd &
+    java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -n 8 -m 24 -q 0.8 -is 3 -ea ${i} -ep ${i} -ajd -quiet -data num-agents-ajd &
+    java -classpath .:./bin:./lib/commons-cli-1.5.0/commons-cli-1.5.0.jar Simulation -g 100000 -n 10 -m 30 -q 0.8 -is 3 -ea ${i} -ep ${i} -ajd -quiet -data num-agents-ajd 
+  done
+done
