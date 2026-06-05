@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# IDE / editor
+.idea/
+.vscode/
+
+# Generated artefacts from make_ini_files.py / run.sh
+max_image_*.ini
+max_image_*.png
+max_image_*.txt
+run.sh
