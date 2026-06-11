@@ -143,7 +143,7 @@ into a `.txt` file per experiment; `make_graphs.ipynb` parses those files.
 
 If you use this code in academic work, please cite:
 
-> _TODO: title, authors, venue, year, DOI/URL. BibTeX block goes here._
+Generosity and Forgiveness: The Importance of Nuanced Reputation, Nathan Griffiths and Nir Oren, Journal of Autonomous Agents and Multi-Agent Systems (to appear)
 
 ## License
 
