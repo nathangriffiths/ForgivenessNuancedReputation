@@ -73,3 +73,13 @@ which should give the following output:
 
 The scripts used to generate the main results in the paper are contained in the scripts directory. Note that the scripts will try to run several simulations simultaneously, so if you have limited cores you may wish to run them individually.
 
+## Analytical code
+
+Please see the separate readme in the analytical subdirectory.
+
+## Citation
+
+If you use this code in academic work, please cite:
+
+Generosity and Forgiveness: The Importance of Nuanced Reputation, Nathan Griffiths and Nir Oren, Journal of Autonomous Agents and Multi-Agent Systems (to appear)
+
